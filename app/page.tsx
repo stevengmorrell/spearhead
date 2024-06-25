@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TwistDeck from "./components/twistDeck";
+import TwistDeck from "./components/TwistDeck";
 
 export default function Home() {
   return (
