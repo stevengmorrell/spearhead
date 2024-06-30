@@ -1,10 +1,9 @@
-import Image from "next/image";
 import TwistDeck from "./components/TwistDeck";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>Title Section</div>
+    <main className="flex flex-col items-center justify-between">
+      <div>Spearhead Card Selector</div>
       <TwistDeck />
       <div>Battle Tactic Deck Section</div>
     </main>
