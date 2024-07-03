@@ -88,6 +88,7 @@ const BattleTacticDeck = () => {
   const [cardsInDeck, setCardsInDeck] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
   ]);
+  const [discardDeck, setDiscardDeck] = useState([]);
 
   const drawCard = () => {
     let tempDeck = [...cardsInDeck];
@@ -103,6 +104,7 @@ const BattleTacticDeck = () => {
 
   const discardCard = (cardToDiscard) => {
     setCardsInHand(cardsInHand.filter((card) => card != cardToDiscard));
+    setDiscardDeck([...discardDeck, cardToDiscard]);
   };
 
   return (
@@ -126,6 +128,12 @@ const BattleTacticDeck = () => {
             >
               Discard Card
             </button>
+          </div>
+        ))}
+        <p>Discard Pile: </p>
+        {discardDeck.map((card) => (
+          <div key={card.Name}>
+            <p>{card.Name}</p>
           </div>
         ))}
 

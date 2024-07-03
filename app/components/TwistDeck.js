@@ -91,14 +91,17 @@ const TwistDeck = () => {
   const [deckName, setDeckName] = useState("Please Select a Deck");
   const [currentCard, setCurrentCard] = useState(null);
   const [cardsInDeck, setCardsInDeck] = useState([0, 1, 2, 3, 4, 5]);
+  const [discardDeck, setDiscardDeck] = useState([]);
 
   const drawCard = () => {
+    currentCard && setDiscardDeck([...discardDeck, currentCard]);
     let tempDeck = [...cardsInDeck];
     const drawnCardArrayValue = getRandomInt(cardsInDeck.length);
     const drawnCardDeckValue = cardsInDeck[drawnCardArrayValue];
     setCurrentCard(deck[drawnCardDeckValue]);
     tempDeck.splice(drawnCardArrayValue, 1);
     setCardsInDeck(tempDeck);
+    console.log(discardDeck);
   };
 
   return (
@@ -137,6 +140,14 @@ const TwistDeck = () => {
 
         <p>Current Card: {currentCard && currentCard.Name}</p>
         <p>Turn: {6 - cardsInDeck.length}</p>
+        <p>Discard Pile: </p>
+        {discardDeck.map((card, index) => (
+          <div key={card.Name}>
+            <p>
+              Turn {index + 1} : {card.Name}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
