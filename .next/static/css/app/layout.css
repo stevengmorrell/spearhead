@@ -566,17 +566,14 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-.m-6 {
-  margin: 1.5rem;
-}
 .m-2 {
   margin: 0.5rem;
 }
+.m-6 {
+  margin: 1.5rem;
+}
 .flex {
   display: flex;
-}
-.min-h-screen {
-  min-height: 100vh;
 }
 .flex-col {
   flex-direction: column;
@@ -601,9 +598,6 @@ video {
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-.p-24 {
-  padding: 6rem;
 }
 .px-4 {
   padding-left: 1rem;
