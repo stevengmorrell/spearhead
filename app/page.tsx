@@ -1,12 +1,12 @@
-import Image from "next/image";
 import TwistDeck from "./components/TwistDeck";
+import BattleTacticDeck from "./components/BattleTacticDeck";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>Title Section</div>
+    <main className="flex flex-col items-center justify-between">
+      <div className="mt-8 text-2xl font-bold">Spearhead Deck Assistant</div>
       <TwistDeck />
-      <div>Battle Tactic Deck Section</div>
+      <BattleTacticDeck />
     </main>
   );
 }
