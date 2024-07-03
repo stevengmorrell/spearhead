@@ -102,7 +102,7 @@ const TwistDeck = () => {
   };
 
   return (
-    <div className="flex-col">
+    <div className="flex-col border-white border-2 rounded p-1 w-[50%] my-8">
       <div className="m-6">
         <p>Selected Deck: {deckName}</p>
         <button
